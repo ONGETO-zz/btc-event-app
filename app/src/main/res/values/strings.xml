@@ -1,28 +1,18 @@
 <resources>
     <string name="app_name">Event App</string>
-    <string name="">Home</string>
-    <string name="">Schedule</string>
-    <string name="">Attendees</string>
-    <string name="">Speakers</string>
-    <string name="">Feed</string>
-    <string name="">Profile</string>
-    <string name="">Venue</string>
-    <string name="">Logout</string>
+    <string name="home">Home</string>
+    <string name="schedule">Schedule</string>
+    <string name="attendees">Attendees</string>
+    <string name="speakers">Speakers</string>
+    <string name="feed">Feed</string>
+    <string name="post_feed">Post To Feed</string>
+    <string name="user_profile">Profile</string>
+    <string name="event_venue">Venue</string>
+    <string name="logout">Logout</string>
 
-    //Profile//
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-
-    <string name=""> </string>
-    <string name=""> </string>
-    <string name=""> </string>
-
+    // Profile
+    <string name="username"></string>
+    <string name="email"></string>
+    <string name="address"></string>
 
 </resources>
