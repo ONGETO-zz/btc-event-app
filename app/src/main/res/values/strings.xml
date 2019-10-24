@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">Event</string>
+    <string name="app_name">Event App</string>
+    <string name="">Home</string>
+    <string name="">Schedule</string>
+    <string name="">Attendees</string>
+    <string name="">Speakers</string>
+    <string name="">Feed</string>
+    <string name="">Profile</string>
+    <string name="">Venue</string>
+    <string name="">Logout</string>
+
+    //Profile//
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+
+    <string name=""> </string>
+    <string name=""> </string>
+    <string name=""> </string>
+
+
 </resources>
