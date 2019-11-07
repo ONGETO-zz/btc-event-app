@@ -23,21 +23,21 @@
             android:orientation="vertical">
 
             <Button
-                android:layout_width="194dp"
-                android:layout_height="150dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@drawable/schedule"
                 />
 
             <Button
-                android:layout_width="184dp"
-                android:layout_height="154dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@drawable/attendees"
-                android:text="Attendees"/>
+                android:text="@string/attendees"/>
 
 
             <Button
-                android:layout_width="187dp"
-                android:layout_height="150dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/chat"
                 />
@@ -51,19 +51,19 @@
             android:orientation="vertical">
 
             <Button
-                android:layout_width="190dp"
-                android:layout_height="125dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@drawable/nfeed" />
 
             <Button
-                android:layout_width="190dp"
-                android:layout_height="150dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@drawable/announcement"
                 />
 
             <Button
-                android:layout_width="206dp"
-                android:layout_height="166dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@drawable/twitter" />
         </LinearLayout>
     </LinearLayout>
