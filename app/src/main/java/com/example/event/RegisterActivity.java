@@ -1,4 +1,4 @@
-package com.example.btcproject;
+package com.example.event;
 
 
 import android.app.AlertDialog;

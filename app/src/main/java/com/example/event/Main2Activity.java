@@ -1,8 +1,10 @@
-package com.example.btcproject;
+package com.example.event;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.event.R;
 
 public class Main2Activity extends AppCompatActivity {
 
