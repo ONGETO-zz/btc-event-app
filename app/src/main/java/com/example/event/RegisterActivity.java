@@ -129,7 +129,7 @@ public class RegisterActivity extends AppCompatActivity {
                                                                                 @Override
                                                                                 public void onClick(DialogInterface dialogInterface, int i) {
                                                                                     finish();
-                                                                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                                                                                    startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
                                                                                 }
                                                                             })
                                                                             .show();

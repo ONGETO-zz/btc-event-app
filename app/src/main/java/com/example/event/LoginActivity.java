@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         if (firebaseAuth.getCurrentUser() != null ) {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
             finish();
             return;
@@ -146,8 +146,8 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public void openMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
+    public void openHomeActivity() {
+        Intent intent = new Intent(this, Homectivity.class);
         startActivity(intent);
 
     }
