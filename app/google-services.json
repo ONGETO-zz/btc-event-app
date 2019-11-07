@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "454887492037",
+    "firebase_url": "https://btcproject-89cf8.firebaseio.com",
+    "project_id": "btcproject-89cf8",
+    "storage_bucket": "btcproject-89cf8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454887492037:android:a979773511f137bc8ea3ac",
+        "android_client_info": {
+          "package_name": "com.example.btcproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454887492037-6b27ttefic288hmk1esbs4q173uduq41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9-9Ayo1pJKxJLJNnAELza9M-2KlcZQMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454887492037-6b27ttefic288hmk1esbs4q173uduq41.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
