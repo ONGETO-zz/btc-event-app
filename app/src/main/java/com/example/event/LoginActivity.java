@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity {
                             if(firebaseAuth.getCurrentUser().isEmailVerified()) {
                                 progressDialog.dismiss();
                                 finish();
-                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                             }else{
                                 progressDialog.dismiss();
                                 AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this)
@@ -145,15 +145,8 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-
-    public void openHomeActivity() {
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
-
-    }
-
     public void SignIn(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 }
