@@ -23,6 +23,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.event.MainActivity" />
         </activity>
+        <activity android:name=".RegisterActivity"
+            android:parentActivityName=".RegisterActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.event.MainActivity" />
+        </activity>
 
     </application>
 

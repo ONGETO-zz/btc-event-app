@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize"
     tools:context=".MainActivity"
-    android:background="@drawable/back">
+    android:background="@drawable/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/schedule"
-                android:onClick="scheduul"
+                android:onClick="schedule"
                 />
 
             <Button
