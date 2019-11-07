@@ -18,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void Home(View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+
+    }
     public void schedule(View view) {
         Intent intent = new Intent(this, ScheduleActivity.class);
         startActivity(intent);
