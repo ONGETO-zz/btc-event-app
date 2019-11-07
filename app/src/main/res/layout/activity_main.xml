@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/photo"
     android:paddingTop="?attr/actionBarSize"
 
     tools:context=".MainActivity">
@@ -22,7 +22,11 @@
             android:gravity="center"
             android:orientation="vertical">
 
-
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/schedule"
+                 />
 
         <Button
                 android:layout_width="100dp"
