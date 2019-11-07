@@ -8,6 +8,65 @@
     android:paddingTop="?attr/actionBarSize"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="194dp"
+                android:layout_height="150dp"
+                android:background="@drawable/schedule"
+                />
+
+            <Button
+                android:layout_width="184dp"
+                android:layout_height="154dp"
+                android:background="@drawable/attendees"
+                android:text="Attendees"/>
+
+
+            <Button
+                android:layout_width="187dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/chat"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="125dp"
+                android:background="@drawable/nfeed" />
+
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="150dp"
+                android:background="@drawable/announcement"
+                />
+
+            <Button
+                android:layout_width="206dp"
+                android:layout_height="166dp"
+                android:background="@drawable/twitter" />
+        </LinearLayout>
+    </LinearLayout>
+
 <com.google.android.material.bottomnavigation.BottomNavigationView
 android:id="@+id/nav_view"
 android:layout_width="0dp"
