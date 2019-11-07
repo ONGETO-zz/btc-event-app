@@ -16,6 +16,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void scheduul(View view) {
         Intent intent = new Intent(this, ScheduleActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void SignIn(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
 
     }
 }

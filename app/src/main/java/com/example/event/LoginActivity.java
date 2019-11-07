@@ -145,4 +145,8 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void SignIn(View view) {
+
+    }
 }
