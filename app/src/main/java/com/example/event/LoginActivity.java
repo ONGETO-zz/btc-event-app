@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         if (firebaseAuth.getCurrentUser() != null ) {
-            Intent intent = new Intent(this, Main2Activity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
             return;
@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity {
                             if(firebaseAuth.getCurrentUser().isEmailVerified()) {
                                 progressDialog.dismiss();
                                 finish();
-                                startActivity(new Intent(LoginActivity.this, Main2Activity.class));
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             }else{
                                 progressDialog.dismiss();
                                 AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this)
