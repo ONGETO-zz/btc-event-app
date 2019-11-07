@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "454887492037",
-    "firebase_url": "https://btcproject-89cf8.firebaseio.com",
-    "project_id": "btcproject-89cf8",
-    "storage_bucket": "btcproject-89cf8.appspot.com"
+    "project_number": "536631874476",
+    "firebase_url": "https://btc-event-app-47764.firebaseio.com",
+    "project_id": "btc-event-app-47764",
+    "storage_bucket": "btc-event-app-47764.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:454887492037:android:a979773511f137bc8ea3ac",
+        "mobilesdk_app_id": "1:536631874476:android:2d1cd509ca028f9d982009",
         "android_client_info": {
-          "package_name": "com.example.event"
+          "package_name": "Com.example.event"
         }
       },
       "oauth_client": [
         {
-          "client_id": "454887492037-6b27ttefic288hmk1esbs4q173uduq41.apps.googleusercontent.com",
+          "client_id": "536631874476-o20fn4llhapjlembttt1rlj8um7ncgs0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB9-9Ayo1pJKxJLJNnAELza9M-2KlcZQMc"
+          "current_key": "AIzaSyAyrrvrNdKSGh5lqG4zqkoGZp6YqsTwu-Q"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "454887492037-6b27ttefic288hmk1esbs4q173uduq41.apps.googleusercontent.com",
+              "client_id": "536631874476-o20fn4llhapjlembttt1rlj8um7ncgs0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
