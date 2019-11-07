@@ -6,7 +6,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:paddingTop="?attr/actionBarSize"
+<<<<<<< HEAD
     tools:context=".MainActivity">
+=======
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+>>>>>>> 96351cacf46142b471bad6f1ce924ed190568c58
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +30,12 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/schedule"
+<<<<<<< HEAD
                 android:onClick="scheduul" />
+=======
+                android:onClick="schedule"
+                />
+>>>>>>> 96351cacf46142b471bad6f1ce924ed190568c58
 
             <Button
                 android:layout_width="100dp"
