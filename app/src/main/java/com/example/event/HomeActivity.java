@@ -37,8 +37,8 @@ public class HomeActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
 
-        mTV = (TextView) findViewById(R.id.textView);
-        mBtn = (Button) findViewById(R.id.button1);
+        mTV = findViewById(R.id.textView);
+        mBtn = findViewById(R.id.button1);
 
         mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
