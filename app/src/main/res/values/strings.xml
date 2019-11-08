@@ -25,5 +25,6 @@
     <string name="emails">Email</string>
     <string name="pass">Password</string>
     <string name="title_event">Events</string>
+    <string name="ANNOUNCEMENTS">ANNOUNCEMENTS</string>
 
 </resources>

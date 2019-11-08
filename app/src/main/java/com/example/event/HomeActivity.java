@@ -36,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
-
+// DatePicker Dialog
         mTV = findViewById(R.id.textView);
         mBtn = findViewById(R.id.button1);
 
@@ -61,6 +61,9 @@ public class HomeActivity extends AppCompatActivity {
             }
 
         });
+
+
+
 
     }
 }
