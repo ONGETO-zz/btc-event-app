@@ -9,15 +9,5 @@
         android:name="com.example.event.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
-    <activity
-        android:id="@+id/registerActivity"
-        android:name="com.example.event.RegisterActivity"
-        android:label="activity_register"
-        tools:layout="@layout/activity_register" />
-    <activity
-        android:id="@+id/loginActivity"
-        android:name="com.example.event.LoginActivity"
-        android:label="activity_login"
-        tools:layout="@layout/activity_login" />
 </navigation>
 
