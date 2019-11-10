@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
@@ -34,11 +35,13 @@ public class HomeActivity extends AppCompatActivity {
     Button Urlopen;
     Button UrlOpen;
     Button btncontact;
+    TextView textViews;
 
     Calendar c;
     DatePickerDialog dpd;
 
     private final int REQUEST_CODE=99;
+    private static final int PICK_CONTACT = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +49,14 @@ public class HomeActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
 
+        textViews = (TextView) findViewById(R.id.textViews);
+
         Button btncontact=(Button)findViewById(R.id.btncontact);
         btncontact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-                startActivityForResult(intent, REQUEST_CODE);
+                startActivityForResult(intent, PICK_CONTACT);
             }
         });
     }
@@ -60,35 +65,19 @@ public class HomeActivity extends AppCompatActivity {
     public void onActivityResult(int reqCode, int resultCode, Intent data) {
         super.onActivityResult(reqCode, resultCode, data);
         switch (reqCode) {
-            case (REQUEST_CODE):
+            case (PICK_CONTACT):
                 if (resultCode == Activity.RESULT_OK) {
                     Uri contactData = data.getData();
-                    Cursor c = getContentResolver().query(contactData, null, null, null, null);
-                    if (c.moveToFirst()) {
-                        String contactId = c.getString(c.getColumnIndex(ContactsContract.Contacts._ID));
-                        String hasNumber = c.getString(c.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER));
-                        String num = "";
-                        if (Integer.valueOf(hasNumber) == 1) {
-                            Cursor numbers = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + contactId, null, null);
-                            while (numbers.moveToNext()) {
-                                num = numbers.getString(numbers.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-                                Toast.makeText(HomeActivity.this, "Number="+num, Toast.LENGTH_LONG).show();
+                    Cursor phone = getContentResolver().query(contactData, null, null, null, null);
+                    if (phone.moveToFirst()) {
+                        String contactNumberName = phone.getString(phone.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+
+                                textViews.setText("Name:" + contactNumberName);
                             }
                         }
-                    }
+
                     break;
                 }
-        }
-
-
-
-
-
-
-
-
-
-        
 
         UrlOpen = (Button) findViewById(R.id.buttontweet);
         UrlOpen.setOnClickListener(new View.OnClickListener() {
@@ -134,6 +123,17 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                //Set event details
+
+                Intent calIntent = new Intent(Intent.ACTION_INSERT);
+                calIntent.setType("vnd.android.cursor.item/event");
+                calIntent.putExtra(CalendarContract.Events.TITLE, "My House Party");
+                calIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, "My Beach House");
+                calIntent.putExtra(CalendarContract.Events.DESCRIPTION, "A Pig Roast on the Beach");
+                startActivity(calIntent);
+
+
+                //confirm the date
                 c = Calendar.getInstance();
                 int day = c.get(Calendar.DAY_OF_MONTH);
                 int month = c.get(Calendar.MONTH);
