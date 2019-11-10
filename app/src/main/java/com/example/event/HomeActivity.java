@@ -30,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
     Button mBtn;
     Button button3;
     Button Urlopen;
+    Button UrlOpen;
 
     Calendar c;
     DatePickerDialog dpd;
@@ -39,6 +40,18 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
+
+        UrlOpen = (Button) findViewById(R.id.buttontweet);
+        UrlOpen.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent Getintent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.twitter.com"));
+                startActivity(Getintent);
+
+            }
+        });
 
         Urlopen = (Button) findViewById(R.id.buttonweb);
         Urlopen.setOnClickListener(new View.OnClickListener() {

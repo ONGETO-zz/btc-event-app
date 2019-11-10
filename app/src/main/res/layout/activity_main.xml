@@ -101,6 +101,7 @@
                 />
 
             <Button
+                android:id="@+id/buttontweet"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/papi" />
