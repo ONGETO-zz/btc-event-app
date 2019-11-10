@@ -1,5 +1,6 @@
 package com.example.event;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
@@ -77,16 +78,17 @@ public class ProfileFragment extends Fragment {
         }
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
+   //  @Override
+    //public void onAttach(Activity activity) {
+      //    super.onAttach(activity);
+     //}
+      //  if (activity instanceof OnFragmentInteractionListener) {
+        //    mListener = (OnFragmentInteractionListener) context;
+        // } else {
+          //  throw new RuntimeException(context.toString()
+            //      + " must implement OnFragmentInteractionListener");
+      // }
+   // }
 
     @Override
     public void onDetach() {
