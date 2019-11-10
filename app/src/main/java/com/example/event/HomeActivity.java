@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.provider.ContactsContract;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
@@ -38,18 +39,23 @@ public class HomeActivity extends AppCompatActivity {
     Button btncontact;
     TextView textViews;
 
+
     Calendar c;
     DatePickerDialog dpd;
 
     private final int REQUEST_CODE=99;
     private static final int PICK_CONTACT = 1000;
 
+    private WebView mWebView;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
-
+        //contact display
         textViews = (TextView) findViewById(R.id.textViews);
 
         Button btncontact=(Button)findViewById(R.id.btncontact);
@@ -86,7 +92,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent Getintent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.twitter.com"));
+                Intent Getintent = new Intent(HomeActivity.this,StWebView.class);
                 startActivity(Getintent);
 
             }
@@ -98,7 +104,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent Getintent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.kenyabuzz.com/events/"));
+                Intent Getintent = new Intent(HomeActivity.this,StdWebView.class);
                 startActivity(Getintent);
 
             }
