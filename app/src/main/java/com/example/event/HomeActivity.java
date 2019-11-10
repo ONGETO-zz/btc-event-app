@@ -1,5 +1,6 @@
 package com.example.event;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.net.Uri;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -31,15 +33,62 @@ public class HomeActivity extends AppCompatActivity {
     Button button3;
     Button Urlopen;
     Button UrlOpen;
+    Button btncontact;
 
     Calendar c;
     DatePickerDialog dpd;
+
+    private final int REQUEST_CODE=99;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
+
+        Button btncontact=(Button)findViewById(R.id.btncontact);
+        btncontact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
+    }
+
+    @Override
+    public void onActivityResult(int reqCode, int resultCode, Intent data) {
+        super.onActivityResult(reqCode, resultCode, data);
+        switch (reqCode) {
+            case (REQUEST_CODE):
+                if (resultCode == Activity.RESULT_OK) {
+                    Uri contactData = data.getData();
+                    Cursor c = getContentResolver().query(contactData, null, null, null, null);
+                    if (c.moveToFirst()) {
+                        String contactId = c.getString(c.getColumnIndex(ContactsContract.Contacts._ID));
+                        String hasNumber = c.getString(c.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER));
+                        String num = "";
+                        if (Integer.valueOf(hasNumber) == 1) {
+                            Cursor numbers = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + contactId, null, null);
+                            while (numbers.moveToNext()) {
+                                num = numbers.getString(numbers.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                                Toast.makeText(HomeActivity.this, "Number="+num, Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    }
+                    break;
+                }
+        }
+
+
+
+
+
+
+
+
+
+        
 
         UrlOpen = (Button) findViewById(R.id.buttontweet);
         UrlOpen.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +108,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent Getintent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.kenyabuzz.com"));
+                Intent Getintent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.kenyabuzz.com/events/"));
                 startActivity(Getintent);
 
             }
