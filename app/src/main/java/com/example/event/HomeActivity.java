@@ -27,6 +27,7 @@ public class HomeActivity extends AppCompatActivity {
 
     TextView mTV;
     Button mBtn;
+    Button button3;
 
     Calendar c;
     DatePickerDialog dpd;
@@ -36,6 +37,19 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
+
+        button3 = findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("Button Clicked");
+
+                Intent activity2Intent = new Intent(getApplicationContext(), AnnounceActivity.class);
+                startActivity(activity2Intent);
+            }
+
+        });
+
 // DatePicker Dialog
         mTV = findViewById(R.id.textView);
         mBtn = findViewById(R.id.button1);
