@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 
 public class HomeActivity extends AppCompatActivity {
@@ -128,8 +129,15 @@ public class HomeActivity extends AppCompatActivity {
                 Intent calIntent = new Intent(Intent.ACTION_INSERT);
                 calIntent.setType("vnd.android.cursor.item/event");
                 calIntent.putExtra(CalendarContract.Events.TITLE, "My House Party");
-                calIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, "My Beach House");
-                calIntent.putExtra(CalendarContract.Events.DESCRIPTION, "A Pig Roast on the Beach");
+                calIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Siwaka");
+                calIntent.putExtra(CalendarContract.Events.DESCRIPTION, "A Prayer Session");
+                GregorianCalendar calDate = new GregorianCalendar(2012, 7, 15);
+                calIntent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true);
+                calIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                        calDate.getTimeInMillis());
+                calIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
+                        calDate.getTimeInMillis());
+
                 startActivity(calIntent);
 
 
